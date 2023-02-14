@@ -41,7 +41,7 @@ class RandomStringTest extends  TestCase{
       $this->assertTrue(ctype_digit($ret));
     }
   }
-  public function test_geneerate_number_symbol_random_string(){
+  public function test_generate_number_symbol_random_string(){
     foreach ( range(1,100) as $size ) {
       $ret = RandomString::gen($size,RandomString::NUMBER|RandomString::SYMBOLS);
       $this->assertTrue(strlen($ret) == $size);
