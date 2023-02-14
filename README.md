@@ -18,6 +18,7 @@ $str = random_string(20);
 $str = random_string(10);
 ```
 
+CHARACTERS
 ```
 ALPHA_NUM = (LOWER, UPPER, NUMBER)
 ALPHA     = (LOWER, UPPER)
@@ -28,7 +29,7 @@ NUMBER    = ( 0, 1, 2,...9 )
 SYMBOL
 ```
 SYMBOL = 
-+ array_map( 'chr' , range( 33, 47 )   // "!,",#,$,%,&,',(,),*,+,,,-,.,/" 
++ array_map( 'chr' , range( 33, 47 )  // "!,",#,$,%,&,',(,),*,+,,,-,.,/" 
 + array_map( 'chr' , range( 91, 96 ) // "[,\,],^,_,`" 
 + array_map( 'chr' , range(123,126 ) // "{,|,},~" 
 ```
