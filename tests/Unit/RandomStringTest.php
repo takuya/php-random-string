@@ -48,5 +48,19 @@ class RandomStringTest extends  TestCase{
       $this->assertTrue(ctype_graph($ret));
     }
   }
+  public function test_generate_lower_random_alpha_num(){
+    foreach ( range(20,120) as $size ) {
+      $str = RandomString::gen($size,RandomString::LOWER|RandomString::NUMBER);
+      $this->assertTrue(ctype_alnum($str));
+      $this->assertEquals( strtolower($str),$str );
+    }
+  }
+  public function test_generate_upper_random_alpha(){
+    foreach ( range(20,120) as $size ) {
+      $str = RandomString::gen($size,RandomString::UPPER|RandomString::NUMBER);
+      $this->assertTrue(ctype_alnum($str));
+      $this->assertEquals( strtoupper($str),$str );
+    }
+  }
   
 }
